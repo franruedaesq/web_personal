@@ -1,0 +1,23 @@
+.project {
+    max-width: 450px;
+    min-width: 330px;
+    height: auto;
+    box-shadow: 0px 1px 5px 1px #8a8a8a;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: all .4s;
+
+    &__title {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 5px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

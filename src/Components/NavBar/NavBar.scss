@@ -1,0 +1,13 @@
+.navBar {
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(44,45,46,1) 4%, rgba(0,11,13,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        color: #fff;
+        font-size: 30px;
+    }
+}

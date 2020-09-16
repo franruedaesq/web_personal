@@ -1,0 +1,17 @@
+.projectsContainer {
+    
+
+    &__title {
+        color: black;
+        font-size: 35px;
+        margin: 15px 0;
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
