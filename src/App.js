@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import CardUserInfo from './Components/CardUserInfo/CardUserInfo';
 import NavBar from './Components/NavBar/NavBar';
 import Projects from './Components/Projects/Projects';
-import {ProyextProvider} from './Context/ProyectContext'
+import {ProjectProvider} from './Context/ProyectContext'
 
 
 function App() {
@@ -21,33 +22,23 @@ function App() {
   const fetchData = async(url, setter) => {
     const data = await fetch(url);
     const jsonData = await data.json()
-    console.log(jsonData)
     setter(jsonData)
   }
 
-  // const fetchGitHubData = async () => {
-  //   const data = await fetch('https://api.github.com/users/franruedaesq');
-  //   const JSONdata = await data.json();
-  //   await setGitHubData(JSONdata)
 
-  //   await fetchUserRepos(JSONdata.repos_url)
-  // }
-
-  // const fetchUserRepos = async (url) => {
-  //   const data = await fetch(url);
-  //   const JSONdata = await data.json();
-
-  //   await setUserReps(JSONdata)
-  // }
-
+  const contextData = {
+    userInfo: gitHubData,
+    repos: userReps
+  }
 
   return (
-    <ProyextProvider value={userReps}>
+    <ProjectProvider value={contextData}>
       <div className="App">
         <NavBar/>
+        <CardUserInfo/>
         <Projects/>
       </div>
-    </ProyextProvider>
+    </ProjectProvider>
   );
 }
 

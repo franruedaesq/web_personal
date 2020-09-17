@@ -1,7 +1,7 @@
 import React from 'react'
 
-const ProyectContext = React.createContext([]);
+const ProyectContext = React.createContext({});
 
-export const ProyextProvider = ProyectContext.Provider;
+export const ProjectProvider = ProyectContext.Provider;
 
 export default ProyectContext;

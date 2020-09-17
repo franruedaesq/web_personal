@@ -12,7 +12,7 @@ export default function Projects() {
             <h2 className="projectsContainer__title">Projects</h2>
 
             <div className="projectsContainer__container">
-                {data.map(item => <Project name={item.name} description={item.description} key={item.id} url={item.html_url} />)}
+                {data.repos.map(item => <Project name={item.name} description={item.description} key={item.id} url={item.html_url} />)}
             </div>
         </div>
     )
